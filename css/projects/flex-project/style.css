@@ -1,0 +1,92 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body{
+   color: white;
+   text-transform: uppercase;
+   font-family: "Lexend Deca", serif;
+   font-size: 13px;
+   margin: 0;
+}
+
+
+main{
+    min-height: 100vh;
+    display: flex;   
+    margin: 2rem;
+}
+
+.card-container{
+    max-width: 800px;
+    display: flex;
+    background-color: orange;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+
+
+.card{
+    padding: 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card h2{
+    font-size: 40px;
+    font-family: "Big Shoulders Display", serif;
+}
+
+.card p{
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+
+.card img{
+    width: 64px;
+    height: 40px;
+}
+
+
+.card button{
+    border: 2px solid white;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    margin-top: auto;
+    
+}
+
+.card button:hover{
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.orange-card{
+    background-color: hsl(31, 77%, 52%);
+}
+.green-card{
+    background-color:hsl(184, 100%, 22%);
+}
+.dark-green-card{
+    background-color: hsl(179, 100%, 13%);
+}
+
+@media (max-width:800px){
+    .card-container{
+        flex-direction: column;
+    }
+
+    .card{
+        width: unset;
+    }
+}

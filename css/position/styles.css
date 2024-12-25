@@ -1,0 +1,13 @@
+#parent{
+    background-color: brown;
+    position: relative;
+}
+
+#child{
+    position: absolute;
+    background-color: aquamarine;
+    left: 10;
+    right: 10;
+}
+
+
