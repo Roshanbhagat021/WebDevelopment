@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Salsa", serif;
+  background-color: orange;
+}
+
+* {
+  /* margin: 0; */
+  box-sizing: border-box;
+}
+
+.hero-section {
+  min-height: max-content;
+  background-image: url(images/orange-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#jhalar-image {
+  width: 200px;
+}
+
+.ParaAndMusic {
+  width: 37vw;
+  margin-top: -5rem;
+  margin-left: 12rem;
+}
+
+.ParaAndMusic p {
+  font-size: 32px;
+  width: 85%;
+  margin-bottom: 1rem;
+  /* line-height: 57px; */
+}
+
+.deepak-image {
+  max-width: 20rem;
+  margin-top: -1rem;
+  margin-left: 2rem;
+}
+
+#music-control {
+  display: flex;
+  align-items: center;
+  background-color: #fbd8a4;
+  border-radius: 2rem;
+  justify-content: end;
+  max-width: max-content;
+  padding-left: 15px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #fbd8a4;
+}
+
+.music-icon {
+  margin-inline: 5px;
+}
+
+/* ----------- Laxmi-Ganesh Section --------------*/
+
+.laxmi-ganesh {
+  min-height: max-content;
+  /* background-color: orange; */
+}
+
+.decoration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  min-height: 50px;
+  margin-bottom: 3rem;
+}
+
+.line {
+  width: 40vw;
+  border: 2px solid white;
+  border-radius: 1rem;
+}
+
+.circle {
+  width: 0.5em;
+  height: 0.5em;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#img-container {
+  width: 92%;
+  border: 3px solid white;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+
+#img-container img {
+    width: 100%;
+}   
+
+
+#wishes {
+  font-size: 70px;
+  font-family: Style Script;
+  font-weight: 400;
+  line-height: 106px;
+  text-align: center;
+  margin-top: 45px;
+}
+
+
+/* -------------- Girl and Para -------------- */
+.white-card-container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding-inline: 2rem;
+}
+
+.white-card{
+  background-color: white;
+  max-width: 650px;
+  padding: 3.5rem;
+  border-radius: 20px;
+}
+
+.white-card-container img{
+   width: 280px;
+   margin-left: -6rem;
+}
+
+.white-card p{
+  font-size: 32px;
+}
+
+/* -------------footer-------------- */
+
+footer{
+  margin-inline: 2rem;
+}
+
+footer p{
+  font-size: 24px;
+  margin-block: 1.5rem;
+}
+
+footer p:nth-of-type(2){
+  font-family: Style Script;
+  font-size: 70px;
+}
+
+footer div{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 800px) {
+  .ParaAndMusic {
+    width: 100vw;
+    margin-top: 1rem;
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+
+  
+  .decoration {
+    margin-bottom: 2rem;
+  }
+
+  .ParaAndMusic p {
+    font-size: 24px;
+  }
+
+  .music-icon {
+    display: none;
+  }
+
+  .deepak-image {
+    width: 85vw;
+    margin-top: 0rem;
+  }
+  .deepak-image:nth-of-type(2) {
+    display: none;
+  }
+
+  /* Ganesh laxmi */
+  #wishes {
+    font-size: 40px;
+    line-height: 57px;
+  }
+
+  #img-container {
+    border-radius: 0.7rem;
+  }
+
+  footer{
+    margin-inline: 1.5rem;
+  }
+  
+  footer p{
+    font-size: 20px;
+    margin-block: 1rem;
+  }
+  
+  footer p:nth-of-type(2){
+    font-size: 50px;
+  }
+
+  footer div{
+    font-size: 18px;
+  }
+}
+
+
+
+@media (max-width:760px){
+  .white-card-container img{
+    width: 200px;
+    
+ }
+  .white-card {
+   padding-block: 3rem;
+   padding-left: 2rem;
+   padding-right: 3rem;
+ }
+ .white-card p{
+  font-size: 18px;
+}
+
+.decoration {
+  margin-bottom: 1.5rem;
+}
+footer{
+  margin-inline: 1.4rem;
+}
+
+footer p{
+  font-size: 18px;
+}
+
+footer p:nth-of-type(2){
+  font-size: 44px;
+}
+
+
+}
+
+
+@media (max-width:448px){
+  .white-card-container img{
+    width: 180px;
+    margin-left: -4rem;
+    
+ }
+  .white-card {
+    padding-block: 5px;
+   padding-left: 1rem;
+   padding-right: 3rem;
+ }
+ .white-card p{
+  font-size: 16px;
+}
+
+.decoration {
+  margin-bottom: 1rem;
+}
+}
