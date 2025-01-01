@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 1rem;
+            padding: 1rem;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            color: white;
+            margin-bottom: -7rem;
+            overflow: scroll;
+        }
+
+        .red-box{
+            background-color: red;
+            position: relative;
+        }
+
+        .green-box{
+            background-color: green;
+            margin-left: 2rem;
+        }
+
+        .blue-box{
+            background-color: blue;
+            position: relative;
+            margin-left: 3rem;
+            
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red-box">RED</div>
+        <div class="box green-box">GREEN</div>
+        <div class="box blue-box">BLUE</div>
+    </div>
+
+    
+    
+</body>
+</html>
