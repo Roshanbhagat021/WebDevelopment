@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images with Text Around (No Float)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .image-with-text {
+      display: flex;
+      flex-wrap: wrap; /* Ensures content wraps when needed */
+      gap: 20px; /* Space between image and text */
+      margin-bottom: 20px;
+    }
+
+    .image-with-text img {
+      max-width: 40%; /* Limit image width */
+      height: auto;
+      border-radius: 8px; /* Optional: Rounded corners */
+    }
+
+    .text {
+      flex: 1; /* Text will take remaining space */
+      min-width: 250px; /* Prevent text from shrinking too much */
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Article Title</h1>
+
+    <div class="image-with-text">
+      <img src="https://placeholder.com/300" alt="Sample Image">
+      <div class="text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat nisi a lacus fermentum,
+          in commodo eros sagittis. Sed posuere, lacus eu tincidunt tincidunt, erat sapien facilisis urna,
+          id posuere neque mi et lacus.
+        </p>
+      </div>
+    </div>
+
+    <div class="image-with-text">
+      <div class="text">
+        <p>
+          Curabitur dapibus luctus felis a dapibus. Proin lacinia facilisis libero, vel volutpat felis pharetra
+          ut. Pellentesque ornare metus nec ex dapibus suscipit. In vehicula feugiat augue sit amet scelerisque.
+        </p>
+      </div>
+      <img src="https://placeholder.com/300" alt="Another Image">
+    </div>
+  </div>
+</body>
+</html>
