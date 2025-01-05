@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4,100px);
+            grid-template-rows: repeat(4,100px);
+            background-color: cadetblue;
+        }
+
+        .box1{
+            background-color: aqua;
+            grid-column-start: 2;
+            grid-row-start: 2;
+            grid-column-end: 4;
+            grid-row-end: 4;
+         
+        }
+       
+        .box3{
+            background-color: brown;
+            order: 4;
+        } 
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="box box1">1</span>
+        <span class="box box3">1</span>
+        <span class="box box4">1</span>
+        <span class="box box5">1</span>
+        <span class="box box6">1</span>
+        <span class="box box7">1</span> 
+    </div>
+</body>
+</html>
