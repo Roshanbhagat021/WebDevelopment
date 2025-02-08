@@ -11,8 +11,10 @@
 
 const maths = {
     pie: 3.141591,
+    a:45,
+    b:78,
     add: function (a,b){
-        return (a+b)
+        return (a,b)
     },
     subtract: function (a,b){
         return (a-b)
@@ -20,10 +22,14 @@ const maths = {
     square: function(a){
         return (a*a)
     },
-    abs:function(a){
+    // this is also a valid way to define a method
+    abs(a){
         return a<0?-(a):a
+    },
+    cube(num){
+        return num **3
     }
 }
 
-console.log(maths.abs(maths.subtract(1,5)))
+console.log(maths.cube(8))
 
