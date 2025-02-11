@@ -29,3 +29,13 @@ for (let fruit in fruits){
 // 4
 // 5
 // 6
+
+
+
+function foo(){
+    // debugger
+    let name ="Roshan"
+    return name
+}
+
+console.log(foo())
