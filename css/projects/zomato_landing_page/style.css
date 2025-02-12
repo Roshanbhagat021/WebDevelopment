@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#hero-section{
+    background-image: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+    width: 100%;
+    height: 66.5vh;
+    background-position: center ;
+    position: relative;
+}
+
+#header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#header #logo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+nav ul{
+    display: flex;
+    gap: 1.5rem;
+}
+
+ul li{
+    font-weight: 100;
+    font-size: 18px;
+    list-style-type: none;
+}
+
+
+#search-section{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+#search-section img{
+    width: 300px;
+}
+#search-section h2{
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.search-box{
+    background-color: white;
+    width: 80%;
+    max-width: 700px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 15px 10px;
+    gap: 10px;
+}
+
+.search-box div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+#location-dropdown{
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.search-box div #location-dropdown:hover{
+    transform: rotate(180deg);
+}
+.search-box div input{
+    width: 60%;
+}
+
+input{
+    outline: none;
+    border: 0;
+}
+
+.search-box div:nth-child(1){
+    width: 40%;
+    /* background-color: brown; */
+    border-right: 2px solid gray;
+    
+}
+.search-box div:nth-child(2){
+    flex: 1;
+    /* background-color: red; */
+}
