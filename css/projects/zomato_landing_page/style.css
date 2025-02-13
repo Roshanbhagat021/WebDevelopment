@@ -2,16 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #hero-section{
     background-image: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
     width: 100%;
-    height: 66.5vh;
+    height: 100vh;
+    max-height:450px;
     background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
+    
+    /* back */
 }
 
 #header{
@@ -20,21 +25,38 @@
     display: flex;
     justify-content: space-between;
     padding: 25px;
+    position: relative;
+    color: white;
 }
 
-#header #logo{
+
+
+#header #menu-icon {
+    display: block;  
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    font-weight: 800;
+    position: absolute; 
+    display: none;
+}
+
+
+
+#header #mobile-icon{
     display: flex;
     align-items: center;
     gap: 4px;
     font-size: 14px;
 }
 
-nav ul{
+#first-headers-links ul{
     display: flex;
     gap: 1.5rem;
+   
 }
 
-ul li{
+#first-headers-links ul li{
     font-weight: 100;
     font-size: 18px;
     list-style-type: none;
@@ -45,18 +67,21 @@ ul li{
     position: absolute;
     bottom: 10%;
     left: 50%;
-    transform: translate(-50%,-30%);
+    transform: translate(-50%,-10%);
     text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
+    color: white;
 }
 
 #search-section img{
-    width: 300px;
+    width:80vw;
+    max-width: 300px;
 }
+
 #search-section h2{
     font-size: 36px;
     font-weight: 300;
@@ -79,7 +104,10 @@ ul li{
     align-items: center;
     gap: 10px;
     justify-content: flex-start;
+    /* background-color: brown; */
 }
+
+
 
 #location-dropdown{
     transition: all 0.5s ease-in-out;
@@ -108,4 +136,98 @@ input{
 .search-box div:nth-child(2){
     flex: 1;
     /* background-color: red; */
+}
+
+
+#responsive-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    z-index: 5;
+    transform: translateY(-100%);
+    transition: all 1s ease;
+    visibility: hidden; /* Hide the menu initially */
+}
+
+#responsive-menu.open {
+    transform: translateY(0);
+    visibility: visible; /* Show the menu when it has the "open" class */
+}
+
+#responsive-menu #closeBtn_logo_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#responsive-menu #second-headers-links ul{
+    list-style-type: none;
+}
+#responsive-menu #second-headers-links ul li{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align:left;
+    color: black;
+    font-weight: 200;
+}
+
+#close-btn{
+    font-size: 2.5rem;
+}
+
+#logo img{
+    width:50vw;
+    max-width: 150px;
+}
+
+
+
+
+#different-product-section{
+    width: 95vw;
+    max-width: 1100px;
+    display:flex;
+    gap:20px;
+    flex-wrap: wrap;
+    background-color: red;
+    margin: auto;
+    justify-content: space-between;
+}
+
+#different-product-section div{
+    width: 32%;
+    
+}
+#different-product-section div img{
+    width: 100%;
+    height: 60%;
+}
+
+
+@media (max-width:770px){
+    #header #mobile-icon, #header #first-headers-links{
+        display: none;
+    } 
+
+    #header #menu-icon{
+        display:block;
+    }
+
+    #search-section h2{
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width:500px){
+    #search-section h2{
+        font-size: 28px;
+    }
 }
