@@ -9,3 +9,7 @@ menuIconElement.addEventListener("click", () => {
 closeIconElement.addEventListener("click", () => {
     responsiveMenu.classList.toggle("open"); // Remove the "open" class to hide the menu
 });
+
+
+
+  

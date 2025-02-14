@@ -7,7 +7,7 @@
 }
 
 #hero-section {
-  background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+  background-image: url("./assets/hero_section_background_image.webp");
   width: 100%;
   height: 100vh;
   max-height: 450px;
@@ -180,7 +180,6 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  /* background-color: yellow; */
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 5rem;
@@ -191,10 +190,9 @@ input {
   background-position: bottom;
   border-radius: 10px;
   height: 50vh;
-  max-height: 300px;
+  max-height: 280px;
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   transition: transform 0.25s;
  
   
@@ -221,7 +219,7 @@ input {
   flex-direction: column;
   gap: 0.7rem;
   width: 100%;
-  height: 30%;
+  height: 35%;
   bottom: 0;
   left: 0;
   background-color: rgb(255, 255, 255);
@@ -256,6 +254,11 @@ input {
   #search-section h2 {
     font-size: 30px;
   }
+
+  .card-text{
+    gap: 0.75rem;
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -269,7 +272,6 @@ input {
 
   .card-text{
     gap: 0.5rem;
-    font-size: 15px;
-
+    font-size: 12px;
   }
 }
