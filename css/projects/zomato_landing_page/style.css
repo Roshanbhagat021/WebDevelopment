@@ -237,8 +237,101 @@ input {
     width: 100%; /* Ensure it doesn't exceed the parent */
     display: block; /* Ensures it's a block element */
   }
-  
 
+
+  #collections{
+    width: 95vw;
+    max-width: 1100px;
+    margin:  4rem auto;
+  }
+  
+  #collecion_heading h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  #collecion_heading p{
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1rem;
+    color: rgb(78, 78, 78);
+  }
+
+  #collecion_heading p span{
+    color: rgb(255 126 139);
+  }
+
+
+  .place_card_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0.6rem;
+  }
+
+
+  .place_card_container .place-card:nth-child(1){
+    background-image: url("assets/card_img1.webp");
+  }
+  .place_card_container .place-card:nth-child(2){
+    background-image: url("assets/card_img2.webp");
+  }
+  .place_card_container .place-card:nth-child(3){
+    background-image: url("assets/card_img3.webp");
+  }
+  .place_card_container .place-card:nth-child(4){
+    background-image: url("assets/card_img4.webp");
+  }
+
+
+
+  .place-card{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 320px;
+    position: relative;
+    
+    cursor: pointer;
+  }
+
+  .place-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    width: 100%;
+    background-color: red;
+    height: 100%;
+    /* z-index: 500; */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+  }
+
+
+  .place-text{
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    color: rgb(211, 207, 207);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    overflow: hidden;
+    padding: 0.8rem;
+  }
+
+  .place-text h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%; 
+    display: block; 
+  }
 
 
 @media (max-width: 770px) {
@@ -259,6 +352,11 @@ input {
     gap: 0.75rem;
     font-size: 15px;
   }
+
+  .place_card_container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -273,5 +371,25 @@ input {
   .card-text{
     gap: 0.5rem;
     font-size: 12px;
+  }
+
+  .place_card_container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  
+  #food_and_event_cards {
+    grid-template-columns:1fr;
+  }
+
+  .card-text{
+    gap: 0.5rem;
+    font-size: 15px;
+  }
+  .place_card_container{
+    grid-template-columns: 1fr;
   }
 }
