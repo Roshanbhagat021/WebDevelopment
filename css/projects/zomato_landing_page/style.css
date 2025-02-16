@@ -27,6 +27,10 @@
   color: white;
 }
 
+#header h4{
+  font-weight: 500;
+}
+
 #header #menu-icon {
   display: block;
   width: 30px;
@@ -306,7 +310,7 @@ input {
     background-color: red;
     height: 100%;
     /* z-index: 500; */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.01) 85%);
   }
 
 
@@ -334,6 +338,188 @@ input {
   }
 
 
+#location-section{
+  width: 95vw;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+#location-section h2{
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: rgb(78, 77, 77);
+  margin-bottom: 2rem;
+}
+
+#location-section h2 span{
+  color: black;
+}
+
+#localities{
+  margin-bottom: 0.8rem;
+}
+
+#localities{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0.8rem;
+}
+
+#localities .places{
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 0.6rem;
+  
+}
+.places div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.places div h3{
+  color: rgb(28,28,28);
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.places div p{
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgb(54,54,54);
+}
+
+.places:hover{
+  box-shadow: rgba(28, 28, 28, 0.08) 0px 1.42623px 2.85246px;
+}
+
+#localities .last-place{
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+  color: rgb(54,54,54)
+}
+
+#localities:hover{
+  cursor: pointer;
+}
+
+.last-place img{
+  width: 1rem;
+}
+
+#localities .expended{
+  display: none;
+}
+
+#app-section{
+  width: 100%;
+  margin: auto;
+  /* height: 30vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 251, 247);
+  gap: 1rem;
+}
+
+
+#app-section #app-image{
+  width: 50%;
+  max-width: 400px;
+}
+
+#app-section>div{
+  /* width: 40%; */
+  padding: 1rem;
+  /* background-color: blue; */
+}
+
+#app-section div h2{
+  font-size: 42px;
+  margin: 0px 0px 1.5rem;
+  color: rgb(28,28,28);
+}
+
+#app-section div .call-to-action-text{
+  font-size: 18px;
+  margin: 0px 0px 2.5rem;
+  color: rgb(28,28,28);
+  font-weight: 300;
+}
+
+input[type="radio"] {
+  accent-color: rgb(239,79,95); ;
+  stroke: rbg(239,79,95);
+  stroke-width: 1px;
+  fill: rgb(255, 255, 255);
+  width: 20px;
+  height: 20px;
+  /* margin-block: rem; */
+  /* margin-right:10px ; */
+}
+
+label{
+  padding-inline:0.8rem ;
+}
+
+input[type="number"],input[type="email"]{
+  padding: 1.1rem;
+  border: 0.1rem solid rgb(207, 207, 207);
+  border-radius: 0.5rem;
+  outline: none;
+  color: rgb(28,28,28);
+  font-size: 18px;
+  margin-right: 0.3rem;
+}
+
+input[type="submit"]{
+  padding: 1.1rem 1.3rem;
+  background-color: rgb(239,79,95); 
+  font-size: 18px;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 200;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+
+
+.input-btns{
+   display: flex;
+  align-items: center;
+}
+
+#app-section .download-text{
+  font-size: 0.9rem;
+  color: rgb(156, 156, 156);
+  font-size: 200;
+  margin-block: 1rem;
+}
+
+.download-source{
+  display: flex;
+  gap: 1.4rem;
+}
+.download-source img{
+ width: 140px;
+}
+
+
+
+@media (max-width:880px){
+  input[type="submit"]{
+    width: 255px;
+  }
+}
+
+
 @media (max-width: 770px) {
   #header #mobile-icon,
   #header #first-headers-links {
@@ -357,6 +543,28 @@ input {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
+  #localities{
+    grid-template-columns: repeat(2,1fr);
+  }
+  #app-section{
+    gap: 0.2rem;
+  }
+
+  #app-section div h2{
+   font-size: 30px;
+  }
+
+  #app-section div .call-to-action-text{
+    font-size: 14px;
+  }
+
+  input[type="number"],input[type="email"],input[type="submit"]{
+    width: 250px;
+    padding: 0.85rem;
+    font-size: 14px;
+    margin-bottom: 0.3rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -377,6 +585,23 @@ input {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
   }
+  #localities{
+    grid-template-columns: 1fr;
+  }
+  #app-section #app-image{
+    display: none;
+  }
+  #app-section>div{
+    width: 100%;
+
+  }
+
+  input[type="number"],input[type="email"],input[type="submit"]{
+    width: 100%;}
+
+    .place-card{
+      height: 250px;
+    }
 }
 
 @media (max-width: 350px) {
