@@ -6,6 +6,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 #hero-section {
   background-image: url("./assets/hero_section_background_image.webp");
   width: 100%;
@@ -427,6 +429,7 @@ input {
   align-items: center;
   background-color: rgb(255, 251, 247);
   gap: 1rem;
+  margin-top: 6rem;
 }
 
 
@@ -515,7 +518,7 @@ input[type="submit"]{
   background-color: #fcfcfc;
   max-width: 100%;
   margin-inline:16px ;
-  padding-top: 4rem;
+  padding-top: 5rem;
 }
 
 .accordion {
