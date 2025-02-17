@@ -12,7 +12,7 @@
     <main>
       <section id="hero-section" class="lazy-img">
         <div id="header">
-          <div id="menu-icon" isOpen="0">☰</div>
+          <div id="menu-icon" onclick="toggleResponsiveMenu()">☰</div>
           <div id="mobile-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,24 +42,20 @@
               <li>Invertor Relations</li>
               <li>Add restaurant</li>
               <li>Log in</li>
-              <li>Sign up</li>
+              <li >Sign up</li>
             </ul>
           </nav>
           <div id="responsive-menu">
             <div id="closeBtn_logo_section">
-              <div id="close-btn">&times;</div>
+              <div id="close-btn" onclick="toggleResponsiveMenu()" >&times;</div>
               <div id="logo">
                 <img src="assets/logo-black.png" alt="logo-black" />
               </div>
             </div>
             <div>
               <nav id="second-headers-links">
-                <ul>
-                  <li>Invertor Relations</li>
-                  <li>Add restaurant</li>
-                  <li>Log in</li>
-                  <li>Sign up</li>
-                </ul>
+                
+                
               </nav>
             </div>
           </div>
@@ -316,6 +312,14 @@
       </div>
 
       
+    </section>
+
+    <section id="footer-section">
+      <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
     </section>
     </main>
   </body>

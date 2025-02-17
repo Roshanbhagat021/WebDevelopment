@@ -1,20 +1,34 @@
-const pokemonsContainer = document.querySelector(".pokemons")
+const pokemonsContainer = document.querySelector(".pokemons");
 
-for (let i=1; i<100; i++){
-    const newImage = document.createElement("img")
-    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/${i}.png`
-    newImage.src=imageUrl;
-    newImage.alt  = `image${i}`
-    // pokemonsContainer.appendChild(newImage)
+
+for (var i = 1; i < 100; i++) {
+  const newImage = document.createElement("img");
+  const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/${i}.png`;
+  newImage.src = imageUrl;
+  newImage.alt = `image${i}`;
+  pokemonsContainer.appendChild(newImage);
 }
 
+function createWrapper() {
+  const wrapperContainer = document.createElement("div");
+  wrapperContainer.classList.add("wrapper");
+  const addNewCardBtn = document.createElement("div");
+  addNewCardBtn.classList.add("createNewCard");
+  addNewCardBtn.innerText = "+";
+  wrapperContainer.appendChild(addNewCardBtn);
+  pokemonsContainer.appendChild(wrapperContainer);
+  wrapperContainer.addEventListener("click", () => {
+    wrapperContainer.remove();
+    const newImage = document.createElement("img");
+    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/${i}.png`;
+    newImage.src = imageUrl;
+    newImage.alt = `image${i++}`;
+    pokemonsContainer.append(newImage);
+    createWrapper()
+  });
+  
+}
 
- // newImage.addEventListener("click",()=>{
-    //     const link = document.createElement("a")
-    //     link.href = imageUrl
-    //     link.download = `image${i}`
+createWrapper()
 
-    //     document.body.appendChild(link)
-    //     link.click()
-    //     document.body.removeChild(link)
-    // })
+

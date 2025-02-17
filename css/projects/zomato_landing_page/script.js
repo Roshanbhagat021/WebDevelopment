@@ -1,6 +1,4 @@
 const responsiveMenu = document.querySelector("#responsive-menu");
-const menuIconElement = document.querySelector("#menu-icon");
-const closeIconElement = document.querySelector("#close-btn");
 const localitiesContainer = document.querySelector("#localities");
 const seeMoreBtn = document.querySelector(".last-place");
 const seeLessBtn = document.querySelector(".fold");
@@ -9,13 +7,10 @@ const restaurantsTypesElement = document.querySelector(".restaurants-types");
 const restaurantsElement = document.querySelector(".restaurants");
 const citiesElement = document.querySelector(".cities");
 
-menuIconElement.addEventListener("click", () => {
-  responsiveMenu.classList.add("open"); // Add the "open" class to show the menu
-});
 
-closeIconElement.addEventListener("click", () => {
-  responsiveMenu.classList.remove("open"); // Remove the "open" class to hide the menu
-});
+function toggleResponsiveMenu(){
+    responsiveMenu.classList.toggle("open");
+}
 
 async function fetchData() {
   try {
@@ -146,3 +141,4 @@ async function accordianData() {
 }
 
 accordianData();
+

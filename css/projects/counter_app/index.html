@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        main{
+            margin: 10rem auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="count">0</h1>
+        <button>-</button>
+        <button>+</button>
+        <p>Increment/Decremet by: <input type="number" id="inc_dec_by"></p>
+        <span  onclick="reset()" id="reset">Reset</span>
+    </main>
+    <script>
+        const count =  document.querySelector("#count")
+        const input = document.querySelector("#inc_dec_by")
+        const resetBtn = document.querySelector("#reset")
+        const btns =  document.querySelectorAll("button")
+
+        btns.forEach((el)=>{
+            el.addEventListener("click",()=>{
+            if(el.innerText === "+"){
+               count.innerText = parseInt(count.innerText) + (parseInt(input.value) || 1)
+            }else if(el.innerText === "-"){
+                count.innerText = parseInt(count.innerText) - (parseInt(input.value) || 1)
+            }
+        })
+        })
+
+        function reset(){
+            count.innerText = 0
+        }
+        
+    </script>
+</body>
+</html>
