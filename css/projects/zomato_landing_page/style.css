@@ -511,6 +511,108 @@ input[type="submit"]{
  width: 140px;
 }
 
+#options-section{
+  background-color: #fcfcfc;
+  max-width: 100%;
+  margin-inline:16px ;
+  padding-top: 4rem;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto ;
+}
+.accordion h2{
+  font-size: 32px;
+  color: rgb(68, 67, 67);
+  
+  margin-bottom: 1.75rem;
+}
+.accordion-item {
+  border: 1px solid rgb(232, 232, 232);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: white;
+  padding-block: 0.4rem;
+}
+.accordion-header {
+  background-color: white;
+  cursor: pointer;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+
+}
+
+.accordion-header h3{
+  font-size: 20px;
+  font-weight: 200;
+  color: rgb(56, 56, 56);
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+
+}
+
+.accordion-content a{
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: rgb(133, 132, 132);
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+.accordion-content a:hover{
+  color: rgb(82, 81, 81);
+}
+
+.accordion-content span{
+  width: 4px;
+  height: 4px;
+  background-color:rgb(54,54,54);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline: 0.4rem;
+}
+
+.accordion-content span:last-of-type {
+  display: none;
+}
+
+#cities {
+  display: none;
+  grid-template-columns: repeat(5,1fr);
+  gap: 1rem;
+}
+
+#restaurants{
+  display: none;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0.5rem;
+}
+
+
+#cities span, #restaurants span{
+  display: none;
+}
+
+#cities a:last-of-type{
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+
 
 
 @media (max-width:880px){
@@ -565,6 +667,10 @@ input[type="submit"]{
     font-size: 14px;
     margin-bottom: 0.3rem;
   }
+
+  #cities {
+    grid-template-columns: repeat(3,1fr);
+  }
 }
 
 @media (max-width: 500px) {
@@ -602,6 +708,12 @@ input[type="submit"]{
     .place-card{
       height: 250px;
     }
+
+    #cities,#restaurants {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    
 }
 
 @media (max-width: 350px) {

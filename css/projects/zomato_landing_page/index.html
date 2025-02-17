@@ -277,7 +277,46 @@
         </div>
       </section>
 
-    
+    <section id="options-section">
+      <div class="accordion">
+        <h2>Explore options near me</h2>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3>Popular cuisines near me</h3>
+            <span><img src="./assets/downarrow.svg" alt="downarrow"></span>
+          </div>
+          <div class="accordion-content cuisines">
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3>Popular restaurant types near me</h3>
+            <span><img src="./assets/downarrow.svg" alt="downarrow"></span>
+          </div>
+          <div class="accordion-content restaurants-types">
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this,'grid')">
+            <h3>Top Restaurant Chains</h3>
+            <span><img src="./assets/downarrow.svg" alt="downarrow"></span>
+          </div>
+          <div class="accordion-content restaurants " id="restaurants">
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this,'grid')">
+            <h3>Cities we deliver to</h3>
+            <span><img src="./assets/downarrow.svg" alt="downarrow"></span>
+          </div>
+          <div class="accordion-content cities" id="cities" >
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
     </main>
   </body>
 </html>
