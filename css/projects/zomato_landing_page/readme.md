@@ -29,11 +29,9 @@ This project aims to create a visually appealing and user-friendly landing page 
 
 Here is a demo video of the Zomato Landing Page in action:
 
-<video width="95%" style="margin:auto; max-width=1100;"  controls loop>
-    <source src="./assets/project_presentetion.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
 
+
+![Alt Text](./assets/demo.gif)
 ## Responsiveness
 
 <div style="display:flex; justify-content:center; align-items:center;gap:1rem">
