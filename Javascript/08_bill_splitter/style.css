@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: blueviolet;
+    font-family: sans-serif;
+}
+
+main{
+    width: 100%;
+    max-width: 750px;
+    padding: 30px 20px ;
+    /* background-color: rgb(228, 222, 222); */
+    display: flex;
+    margin: auto;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+main p{
+    font-size: 1.25rem;
+}
+
+#input-container{
+    width: 45%;
+}
+
+#amount input{
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+}
+
+/* Hide arrows for Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#amount span{
+    /* width: 40px; */
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+#amount{
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    /* padding: 10px; */
+    border-radius: 5px;
+    margin: .5rem 0 1rem 0;
+}
+
+
+
+#tip-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0.75rem;
+   margin-block: 0.5rem 0.85rem;
+}
+
+#tip-container button{
+    background-color: #9c60ff;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer; 
+}
+
+
+
+#input-container .disabledBtn button{
+    opacity: 0.5;
+    /* pointer-events: none; */
+    cursor: not-allowed ;
+}
+    
+
+
+#tip-container .selected{
+    outline: 4px solid orange;
+}
+
+.input-class{
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+#generate-bil{
+    background-color: #9c60ff;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    border: none;
+    color: white;
+    margin-top: 0.75rem;
+    cursor: pointer;
+}
+
+#display-container{
+    background-color: #34568b;
+    width: 50%;
+    height: 342px;
+    border-radius: 10px;
+    padding-inline: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#reset{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+
+@media (max-width:550px){
+    main{
+        flex-direction: column;
+    }
+    #input-container{
+        width: 100%;
+    }
+
+    #display-container{
+        width: 100%;
+    }
+    
+}

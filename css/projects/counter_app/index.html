@@ -17,7 +17,7 @@
         <button>-</button>
         <button>+</button>
         <p>Increment/Decremet by: <input type="number" id="inc_dec_by"></p>
-        <span  onclick="reset()" id="reset">Reset</span>
+        <span   id="reset">Reset</span>
     </main>
     <script>
         const count =  document.querySelector("#count")
@@ -35,8 +35,31 @@
         })
         })
 
+        // input.addEventListener("click",(e)=>{
+        //     console.log(e)
+        // })
+
+        // input.onclick = function () {
+        //     console.log("Clicked!");
+        // };
+
+        input.ondblclick = function () {
+            console.log("DBL Clicked!");
+        };
+
+        resetBtn.addEventListener('click',()=>{
+            console.log("Hello");
+        })
+        resetBtn.addEventListener('click',()=>{
+            console.log("Hello2");
+        },{once:true})
+        
+
         function reset(){
-            count.innerText = 0
+            count.innerText = 10
+        }
+        function reset1(){
+            count.innerText = 100
         }
         
     </script>
