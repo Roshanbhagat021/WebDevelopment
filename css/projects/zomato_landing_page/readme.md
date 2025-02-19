@@ -25,7 +25,19 @@ This project aims to create a visually appealing and user-friendly landing page 
 - CSS3
 - JavaScript
 
+## Demo Video
 
+Here is a demo video of the Zomato Landing Page in action:
+
+<video width="95%" style="margin:auto; max-width=1100;"  controls loop>
+    <source src="./assets/project_presentetion.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+## Responsiveness
+
+<div style="display:flex; justify-content:center; align-items:center;gap:1rem">
+<img src="./assets/ipad-screenshot-removebg-preview.png" alt="Spoon and Fork" width="200px" ><img src="./assets/Galaxy-S21-Ultra-zomato-food-ordering-app.netlify.app.png" alt="Spoon and Fork" width="100px" ></div>
 ---
 
 Thank you for visiting the Zomato Landing Page project! If you have any questions or feedback, feel free to reach out.
