@@ -51,6 +51,7 @@
   align-items: center;
   gap: 4px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 #first-headers-links ul {
@@ -62,6 +63,7 @@
   font-weight: 100;
   font-size: 18px;
   list-style-type: none;
+  cursor: pointer;
 }
 
 #search-section {
@@ -511,6 +513,7 @@ input[type="submit"] {
 .download-source img {
   width: 100%;
   max-width: 150px;
+  cursor: pointer;
 }
 
 #options-section {
