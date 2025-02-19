@@ -1,4 +1,4 @@
-# Zomato Landing Page ![Spoon and Fork](images/spoon_fork.png)
+# Zomato Landing Page <img src="./public/spoon_fork.png" alt="Spoon and Fork" width="25px" height="25px">
 
 Welcome to the Zomato Landing Page project! This project is a simple, responsive landing page for Zomato, a popular restaurant discovery and food delivery service.
 
