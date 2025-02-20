@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.toast-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0.5rem auto;
+    padding: 0 0.5rem;
+    overflow: hidden;
+}
+
+.toast-element{
+    width: 100vh;
+    max-width:300px;
+    padding: 12px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 1s ease-out;
+    color: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.toast-element span{
+    cursor: pointer;
+    align-self: self-end;
+    margin-left: auto;
+}
+
+.warning{
+    background-color: #ec6b03;
+}
+
+.warning::before{
+    content: "⚠";
+    margin-right: 8px;
+}
+
+.info{
+    background-color: #4e4e4e;
+}
+
+.info::before{
+    content: "ⓘ";
+    margin-right: 5px;
+}
+
+.success{
+    background-color: #009600;
+}
+
+.success::before{
+    content: "✓";
+    margin-right: 5px;
+}
+
+.error{
+    background-color: red;
+}
+
+.error::before{
+    content: "✗";
+    margin-right: 5px;
+}
+
+#controls{
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    /* background-color: red; */
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+input[type="text"], select,button{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}

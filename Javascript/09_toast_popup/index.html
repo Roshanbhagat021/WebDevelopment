@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Popup</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="toast-container">
+        <!-- <div class="toast-element">You have a invitation on LinkedIn</div>
+        <div class="toast-element">You have a invitation on LinkedIn</div> -->
+    </div>
+    <div id="controls">
+        <h1>Toast Popup</h1>
+        <select name="horizontal-alignment" id="horizontal-alignment">
+            <option value="left" selected>Left</option>
+            <option value="right">Right</option>
+        </select>
+        <select name="vertical-alignment" id="vertical-alignment">
+            <option value="top" selected>Top</option>
+            <option value="bottom">Bottom</option>
+        </select>
+        <select name="type" id="type">
+            <option value="success">Success</option>
+            <option value="error">Error</option>
+            <option value="warning" selected>Warning</option>
+            <option value="info">Info</option>
+        </select>
+        <input type="text" name="message" id="message" placeholder="This is a Toast message!">
+        <input type="range" min="1" max="20" value="4" id="range">
+        <span style="text-align: center;" id="range-display"></span>
+        <button id="show_toast">Show Toast</button>
+    </div>
+    
+</body>
+</html>
