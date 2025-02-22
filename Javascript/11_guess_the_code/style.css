@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: cursive;
+}
+h3{
+    font-weight: 400;
+}
+p{
+    font-size: 12px;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-container{
+    width:70vw;
+    height: 80vh;
+    /* background-color: white; */
+    background-image: url(./assets/image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.hidden-picture{
+    width: 54.4%;
+    height: 63.8%;
+    background-color: white;
+    position: absolute;
+    top: 5.15rem;
+    left:13.75rem;
+    background-image: url(./assets/meme1.png);
+    background-size: contain;
+    background-position:center ;
+    background-repeat: no-repeat;
+    /* background-image: center; */
+    display: none;
+}
+.passcode-container{
+    width: 54.5%;
+    height: 63.8%;
+    background-color: white;
+    position: absolute;
+    top: 5.15rem;
+    left:13.72rem;
+    /* border-radius: 5px; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.profile-image-container{
+    margin-top: 4rem;
+    width: 90px;
+    
+}
+
+.profile-image-container img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+button:disabled img{
+    cursor: not-allowed;
+}
+
+
+form input{
+    padding: 4px;
+    outline: none;
+    width: 180px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form button{
+    padding-right: 8px;
+    background-color: rgb(182, 178, 178);
+    outline: none;
+    border: none;
+    vertical-align: middle;
+}
+
+.input-container{
+    background-color: rgb(182, 178, 178);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-block: 8px;
+}
+
+
+.try-container{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-block: 0.5rem;
+}
+
+.try-container .try-box{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.live{
+    background-color: red;
+}
+
+.result{
+    color: red;
+}
+
+.hints{
+    text-align: center;
+}

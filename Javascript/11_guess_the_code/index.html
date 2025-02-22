@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The  passcode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="desktop-container">
+            <div class="hidden-picture"></div>
+            <div class="passcode-container">
+                <div class="profile-image-container">
+                    <img src="./assets/avatar.png" alt="Avatar">
+                </div>
+                <div class="input-container">
+                    <form >
+                        <input  type="number" min="1" max="100"  placeholder="Enter number">
+                        <button disabled><img src="./assets/right-arrow-svgrepo-com.svg" width="15" alt="right arrow"></button>
+                    </form>
+                </div>
+                <p class="waiting-time"></p>
+                <div class="hints">
+                    <p class="result"></p>
+                <h3 >Guess the Passkey to unlock</h3>
+                <p><span>Hint: </span>Passkey is in between 1 to 100</p>
+                <p >You have <span class="tries-left">7</span> tries !</p>
+                <div class="try-container">
+                    <span class="try-box live"></span>
+                    <span class="try-box live"></span>
+                    <span class="try-box live"></span>
+                    <span class="try-box live"></span>
+                    <span class="try-box live"></span>
+                    <span class="try-box live"></span>
+                    <span class="try-box live"></span>
+                </div>
+                
+                <h2 class="guesses"></h2>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>
