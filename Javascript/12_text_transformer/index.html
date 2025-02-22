@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transformer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main>
+        <input type="text" id="input_box" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+        <div  class="transformed_output">
+            <label >Lower Case</label>
+            <p class="lowerCase">this is a normal sentence to transform</p>
+        </div>
+        <div  class="transformed_output">
+            <label >Upper Case</label>
+            <p class="upperCase">this is a normal sentence to transform</p>
+        </div>
+        <div  class="transformed_output">
+            <label >Camel Case</label>
+            <p class="camelCase">this is a normal sentence to transform</p>
+        </div>
+        <div  class="transformed_output">
+            <label >Pascal Case</label>
+            <p class="pascalCase">this is a normal sentence to transform</p>
+        </div>
+        <div  class="transformed_output">
+            <label >Snake Case</label>
+            <p class="snakeCase">this is a normal sentence to transform</p>
+        </div>
+        <div  class="transformed_output">
+            <label >Kebab Case</label>
+            <p class="kebabCase">this is a normal sentence to transform</p>
+        </div>
+        <div  class="transformed_output">
+            <label >Trim</label>
+            <p class="trim">this is a normal sentence to transform</p>
+        </div>
+    </main>
+    
+</body>
+</html>
