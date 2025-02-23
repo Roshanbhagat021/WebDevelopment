@@ -1,0 +1,60 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100vw;
+    max-width: 900px;
+    margin: auto;
+    
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+main>div{
+    width: 100%;
+    min-height: 55px;
+    margin-block: 20px;
+    background-color: beige;
+    padding: 15px;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+
+main>div>label{
+    position: absolute;
+    background-color: black;
+    padding: 2px 10px;
+    color: white;
+    top: -10px;
+    left: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 22px;
+}
+
+.copyContainer:hover{
+cursor: pointer;
+}
+
+
+.copy,.copied{
+    display: flex;
+    gap: 0.3rem;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Transformer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" -->
+    <main>
+      <input type="text" id="input_box" />
+      <div class="transformed_output">
+        <label
+          >Lower Case
+          <div class="copyContainer">
+            <span class="copy"><img src="./copy.svg" alt="" />Copy</span>
+            <span class="copied hidden"
+              ><img
+                src="./tick.svg"
+                width="16"
+                style="margin-right: 5px"
+                alt=""/>Copied</span>
+          </div>
+        </label>
+        <p class="lowerCase">this is a normal sentence to transform</p>
+      </div>
+      <div class="transformed_output">
+        <label>Upper Case
+            <div class="copyContainer">
+                <span class="copy"><img src="./copy.svg" alt="" />Copy</span>
+                <span class="copied hidden"
+                  ><img
+                    src="./tick.svg"
+                    width="16"
+                    style="margin-right: 5px"
+                    alt=""/>Copied</span>
+              </div>
+        </label>
+        <p class="upperCase"></p>
+      </div>
+      <div class="transformed_output">
+        <label>Camel Case
+            <div class="copyContainer">
+                <span class="copy"><img src="./copy.svg" alt="" />Copy</span>
+                <span class="copied hidden"
+                  ><img
+                    src="./tick.svg"
+                    width="16"
+                    style="margin-right: 5px"
+                    alt=""/>Copied</span>
+              </div>
+        </label>
+        <p class="camelCase"></p>
+      </div>
+      <div class="transformed_output">
+        <label>Pascal Case
+            <div class="copyContainer">
+                <span class="copy"><img src="./copy.svg" alt="" />Copy</span>
+                <span class="copied hidden"
+                  ><img
+                    src="./tick.svg"
+                    width="16"
+                    style="margin-right: 5px"
+                    alt=""/>Copied</span>
+              </div>
+        </label>
+        <p class="pascalCase"></p>
+      </div>
+      <div class="transformed_output">
+        <label>Snake Case
+            <div class="copyContainer">
+                <span class="copy"><img src="./copy.svg" alt="" />Copy</span>
+                <span class="copied hidden"
+                  ><img
+                    src="./tick.svg"
+                    width="16"
+                    style="margin-right: 5px"
+                    alt=""/>Copied</span>
+              </div>
+        </label>
+        <p class="snakeCase"></p>
+      </div>
+      <div class="transformed_output">
+        <label>Kebab Case
+            <div class="copyContainer">
+                <span class="copy"><img src="./copy.svg" alt="" />Copy</span>
+                <span class="copied hidden"
+                  ><img
+                    src="./tick.svg"
+                    width="16"
+                    style="margin-right: 5px"
+                    alt=""/>Copied</span>
+              </div>
+        </label>
+        <p class="kebabCase"></p>
+      </div>
+      <div class="transformed_output">
+        <label>Trim
+            <div class="copyContainer">
+                <span class="copy"><img src="./copy.svg" alt="" />Copy</span>
+                <span class="copied hidden"
+                  ><img
+                    src="./tick.svg"
+                    width="16"
+                    style="margin-right: 5px"
+                    alt=""/>Copied</span>
+              </div>
+        </label>
+        <p class="trim"></p>
+      </div>
+    </main>
+  </body>
+</html>
