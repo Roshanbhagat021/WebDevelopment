@@ -2,7 +2,8 @@ const phoneNumberInputBox = document.querySelector(
   ".teliphone-formatter-input"
 );
 
-phoneNumberInputBox.addEventListener("keypress", (e) => {
+phoneNumberInputBox.addEventListener("keydown", (e) => {
+    console.log(e);
   let acceptedTypes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
   if (!acceptedTypes.includes(e.key)) {
     e.preventDefault();
