@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    font-family: sans-serif;
+    padding-left: 32px;
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  span {
+    color: brown;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  span::after {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      background-color: brown;
+      margin-left: 4px;
+  }
+  
+  h1 span::after {
+      height: 55px;
+  }
+  
+  h3 span::after {
+      height: 16px;
+  }
