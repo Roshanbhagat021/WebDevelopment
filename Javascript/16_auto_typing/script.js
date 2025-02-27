@@ -9,26 +9,32 @@ autoTyping(wordsList,span)
 autoTyping(wordsList2,p)
 
 function autoTyping(wordsList,element){
+    if(!wordsList.length) return;
     let characterIndex = 0;
     let wordIndex = 0
     let reverseType = false
-    setInterval(() => {
-        if(element.innerText.length == wordsList[wordIndex].length){
-            reverseType = true
-        }
-        if(!reverseType){
-            element.innerText = `${element.innerText}${wordsList[wordIndex][characterIndex]}`;
-            characterIndex++;
-        }else if(reverseType){
-            element.innerText = `${element.innerText.slice(0,element.innerText.length-1)}`
-            if(element.innerText.length == 0){
-                reverseType = false
-                characterIndex = 0
-                wordIndex++
-                if(wordIndex==wordsList.length){
-                    wordIndex=0
+
+    function startTyping(){
+        setInterval(() => {
+            if(element.innerText.length == wordsList[wordIndex].length){
+                reverseType = true
+            }
+            if(!reverseType){
+                element.innerText = `${element.innerText}${wordsList[wordIndex][characterIndex]}`;
+                characterIndex++;
+            }else if(reverseType){
+                element.innerText = `${element.innerText.slice(0,-1)}`
+                if(element.innerText.length == 0){
+                    reverseType = false
+                    characterIndex = 0
+                    wordIndex++
+                    if(wordIndex==wordsList.length){
+                        wordIndex=0
+                    }
                 }
             }
-        }
-    }, 200);
+        }, 200);
+    }
+    startTyping()
+    
 }
