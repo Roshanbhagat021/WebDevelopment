@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F6F0EB;
+    font-family: "Poppins", serif;
+}
+
+
+
+
+header{
+    background-color: white;
+}
+
+header div{
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    margin: auto;
+}
+
+nav{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    font-weight: 500;
+}
+

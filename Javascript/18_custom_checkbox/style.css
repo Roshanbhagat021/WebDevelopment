@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    margin-bottom: 20px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.inputContainer{
+    position: relative;
+    /* background-color: yellow; */
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+   
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    opacity: 0;
+}
+
+.label{
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: 2px solid #CFBFFF;
+    cursor: pointer;
+    background-color: #5128C6;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"]:checked + .label {
+    background-color: #CFBFFF;
+    border-color: #5128C6;
+    background-image: url(./tickmark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+
+
+/* input[type="checkbox"]:checked + .label{
+    display: block;
+} */
+
+/* span{
+    margin-left: 2rem;
+} */
