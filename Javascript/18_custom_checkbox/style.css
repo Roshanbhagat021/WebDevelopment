@@ -67,7 +67,6 @@ input[type="checkbox"]{
     width: 25px;
     height: 25px;
     border-radius: 100%;
-    /* background-color: yellow; */
     background-image: url(./sun.svg);
     top: 1px;
     left: 1px;
