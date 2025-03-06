@@ -1,0 +1,57 @@
+body{
+    font-family: cursive;
+}
+
+main{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    /* background-color: red; */
+    text-align: center;
+}
+
+.progress-bar-container{
+    width: 100%;
+    border-radius: 4px;
+    height: 10px;
+    background-color: #ececec;
+    margin-block: 1rem;
+  
+}
+
+.progress-completed[style*="width: 100%"] {
+    border-radius: 4px;
+}
+.progress-completed{
+    height: 100%;
+    background-color: red;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    transition: width 0.02s linear;
+}
+
+p{
+    color: black;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.buttons button{
+    padding: 10px 16px;
+    background-color: #0ff;
+    border: 1px solid grey;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+button:disabled{
+    cursor: not-allowed;
+}
+
+
