@@ -120,6 +120,7 @@ body.dark{
 
 .border-countries p span:hover {
   background-color: rgb(250, 250, 250);
+  color:hsl(200, 15%, 8%) ;
 }
 
 @media (max-width: 1150px) {
