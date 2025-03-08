@@ -72,18 +72,19 @@ header .nav-section {
   border-radius: 5px;
 }
 
+body.dark .input-container input{
+  color: white;
+}
+
 .input-container input {
   background-color: var(--element-background-color);
-  color: hsl(0, 0%, 52%);
+  color: hsl(200, 15%, 8%);
   border: none;
   outline: none;
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
 }
 
-/* .filter-container{
-   
-} */
 
 .filter-head {
 
