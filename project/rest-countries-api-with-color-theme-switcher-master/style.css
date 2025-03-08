@@ -2,46 +2,68 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Nunito;
-  background-color: hsl(0, 0%, 98%);
-  margin: 0;
-}
 
 :root {
-  --maximun-width: 1100px;
+  --maximum-width: 1100px;
+  --background-color: hsl(0, 0%, 98%);
+  --element-background-color:white;
+  --text-color:hsl(200, 15%, 8%);
+}
+
+body {
+  font-family: Nunito;
+  background-color: var(--background-color);
+  margin: 0;
+  color: var(--text-color);
+}
+
+body.dark{
+  --background-color: hsl(207, 26%, 17%);
+  --element-background-color:hsl(209, 23%, 22%);
+  --text-color:white;
+  background-color: var(--background-color);
 }
 
 header {
-  background-color: white;
+  background-color: var(--element-background-color);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  padding-inline: 1.5rem;
+    
+}
+
+.mode-switcher{
+  cursor: pointer;
 }
 
 header .nav-section {
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: var(--maximun-width);
+  max-width: var(--maximum-width);
   margin: auto;
+  padding-inline: 1.5rem;
 }
 
 .nav-section h2 {
   font-weight: 800;
+  color: var(--text-color);
+  
 }
 
 .search-filter-section {
-  max-width: var(--maximun-width);
+  max-width: var(--maximum-width);
   margin: 2rem auto;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding-inline: 1.5rem;
+  
 }
 
 .input-container {
-  background-color: white;
+  background-color: var(--element-background-color);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   display: flex;
@@ -51,6 +73,8 @@ header .nav-section {
 }
 
 .input-container input {
+  background-color: var(--element-background-color);
+  color: hsl(0, 0%, 52%);
   border: none;
   outline: none;
   padding: 0.7rem 1.5rem;
@@ -62,7 +86,9 @@ header .nav-section {
 } */
 
 .filter-head {
-  background-color: white;
+
+  /* background-color: white; */
+  background-color: var(--element-background-color);
   padding: 0.6rem 1.5rem;
   margin-bottom: 0.3rem;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -73,7 +99,7 @@ header .nav-section {
 }
 
 .filter-options {
-  background-color: white;
+  background-color: var(--element-background-color);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   position: absolute;
@@ -95,10 +121,11 @@ header .nav-section {
 
 .filter-options div:hover {
   background-color: rgb(240, 239, 237);
+  color:hsl(200, 15%, 8%) ;
 }
 
 main {
-  max-width: var(--maximun-width);
+  max-width: var(--maximum-width);
   margin: auto;
   margin-bottom: 2rem;
   padding-inline: 1.5rem;
@@ -111,14 +138,35 @@ main {
 }
 
 .country-card {
-  background-color: white;
+  background-color: var(--element-background-color);
   height: 300px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 6px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
+  color: var(--text-color);
 }
+
+.sceleton-card {
+  /* width: 250px; */
+  height: 300px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: -200% 0;
+  }
+  100% {
+      background-position: 200% 0;
+  }
+}
+
+
 
 .country-card:hover{
   transform: scale(1.03);
@@ -150,18 +198,17 @@ main {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 
-@media (max-width: 1150px) {
-  .search-filter-section {
-    margin-inline: 1.5rem;
-  }
-}
 
 @media (max-width: 950px) {
   .country-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .countryNotFoundText{
+    font-size: 24px;
+    display: none;
   }
 }
 
@@ -181,11 +228,19 @@ a {
     gap: 1rem;
   }
 
+  .nav-section h2 {
+    font-size: 18px;
+  }
+
   .input-container {
     width: 100%;
+    overflow: hidden;
   }
   .filter-container {
     width: 100%;
+  }
+  .mode-switcher{
+    font-size: 12px;
   }
 }
 
@@ -195,6 +250,6 @@ a {
     gap: 1.5rem;
   }
   .nav-section h2 {
-    font-size: 18px;
+    font-size: 14px;
   }
 }

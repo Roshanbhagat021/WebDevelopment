@@ -1,6 +1,28 @@
 const extendedInfo = document.querySelector(".extended-details")
 // const countryCode = window.location.search.slice(6)
 const countryCode = new URLSearchParams(location.search).get("cca3")
+const sceletonEffectContainer = document.querySelector(".sceleton-effect-container")
+const modeSwitcher = document.querySelector(".mode-switcher")
+const modeSwitcherIcon = document.querySelector(".mode-switcher i")
+
+const setTheme = (theme) => {
+  document.body.classList.toggle("dark", theme === "dark");
+  modeSwitcherIcon.classList.toggle("fa-regular", theme === "dark");
+  modeSwitcherIcon.classList.toggle("fa-solid", theme === "light");
+};
+
+let theme = localStorage.getItem("theme") || "light";
+localStorage.setItem("theme", theme);
+setTheme(theme);
+
+modeSwitcher.addEventListener("click", () => {
+  theme = theme === "light" ? "dark" : "light";
+  localStorage.setItem("theme", theme);
+  setTheme(theme);
+});
+
+
+
 
 
 async function fetchCountryData(cc) {
@@ -17,24 +39,19 @@ async function fetchCountryData(cc) {
 
 
 async function createDataContainer(data){
-  // console.log('data: ', data.name,Object.values(data.name.nativeName)[0].official);
     let borderCountries = ""
     if (data?.borders) {
       const borderPromises = data.borders.map(async (ccode) => {
         const borderData = await fetchCountryData(ccode);
-        // console.log(borderData[0].name.common);
         return `<a href="singlecountry.html?cca3=${borderData[0].cca3}"><span>${borderData[0].name.common}</span></a>`;
       });
       borderCountries = (await Promise.all(borderPromises)).join('');
     }
-    // console.log(borderCountries);
-
-    
 
     const container = `
       <img src="${data.flags.png}" alt="Flag of ${data.name.common}">
       <div class="more-details">
-        <h2>${data.name.common}&nbsp; <a title="Open to Wikipedia" target="_blank" style="color:blue;" href="https://en.wikipedia.org/wiki/${data.name.common}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+        <h2>${data.name.common}&nbsp; <a title="Open to Wikipedia" target="_blank" style="color:blue;" href="https://en.wikipedia.org/wiki/${data.name.common}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>&nbsp;&nbsp;<a title="Open with googlemaps" target="_blank" style="color:blue;" href="${data.maps.googleMaps}"><i class="fa-solid fa-location-dot"></i></a></h2>
         <div class="regional-details">
           <div class="first-part">
             <p><b>Native Name:</b> ${data.name.nativeName?Object.values(data.name.nativeName)[0].official:data.name.common}</p>
@@ -61,8 +78,10 @@ async function createDataContainer(data){
 
   async function displayData() {
     const [data] = await fetchCountryData(countryCode)
+    sceletonEffectContainer.style.display = "none"
     document.title = data.name.common
+    document.querySelector("link[rel*='icon']").href = data.flags.png;
     createDataContainer(data)
-}
+  }
 
 displayData()
